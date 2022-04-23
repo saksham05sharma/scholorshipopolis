@@ -66,6 +66,7 @@ export default function ContactUs() {
 							label="Name"
 							type="text"
 							id="name"
+							autoFocus
 							value={userMsg.name}
 							onChange={handleChange}
 						/>
@@ -77,7 +78,6 @@ export default function ContactUs() {
 							label="Email Address"
 							name="email"
 							autoComplete="email"
-							autoFocus
 							value={userMsg.email}
 							onChange={handleChange}
 						/>

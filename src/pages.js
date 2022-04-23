@@ -4,12 +4,12 @@ const pages = [
 		link: "/",
 	},
 	{
-		text: "About",
-		link: "/about",
-	},
-	{
 		text: "Check Eligibility",
 		link: "/check",
+	},
+	{
+		text: "Team",
+		link: "/team",
 	},
 	{
 		text: "Login",
