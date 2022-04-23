@@ -14,25 +14,8 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
+import pages from "../../pages";
 
-const pages = [
-	{
-		text: "Home",
-		link: "/",
-	},
-	{
-		text: "About",
-		link: "/about",
-	},
-	{
-		text: "Check Eligibility",
-		link: "/check",
-	},
-	{
-		text: "Login",
-		link: "/login",
-	},
-];
 const settings = [
 	{
 		text: "Account",
