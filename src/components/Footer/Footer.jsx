@@ -1,12 +1,9 @@
 import * as React from "react";
 import favicon from "../../images/favicon-bg.png";
-import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import Link from "@mui/material/Link";
 import { Link as RouterLink } from "react-router-dom";
-import { Button, MenuItem } from "@mui/material";
+import { MenuItem } from "@mui/material";
 import pages from "../../pages.js";
 
 export default function Footer() {
@@ -31,16 +28,13 @@ export default function Footer() {
 				}}
 			>
 				<Container
-					maxWidth="sm"
+					maxWidth="lg"
 					sx={{
 						display: "flex",
 						justifyContent: "space-between",
 						alignItems: "center",
 					}}
 				>
-					{/* <Typography variant="body1">
-						Contact Us
-					</Typography> */}
 					<div className="header-left-image">
 						<img src={favicon} alt="Scholorshipopolis" />
 					</div>
@@ -52,8 +46,8 @@ export default function Footer() {
 							alignItems: "center",
 						}}
 					>
-						{pages.map((page) => (
-							<MenuItem key={page}>
+						{pages.map((page, index) => (
+							<MenuItem key={index}>
 								<RouterLink to={page.link}>
 									{page.text}
 								</RouterLink>
