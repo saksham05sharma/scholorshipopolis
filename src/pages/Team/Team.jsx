@@ -55,6 +55,7 @@ const Team = () => {
 					justifyContent: "space-evenly",
 					alignItems: "center",
 					flexWrap: "wrap",
+					minHeight: "75vh",
 				}}
 			>
 				{team.map((member, index) => (
