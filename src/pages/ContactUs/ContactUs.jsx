@@ -83,7 +83,7 @@ export default function ContactUs() {
 						/>
 						<TextField
 							id="filled-multiline-static"
-							label="Multiline"
+							label="Message"
 							multiline
 							fullWidth
 							rows={4}

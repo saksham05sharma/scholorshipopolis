@@ -43,15 +43,15 @@ const Home = () => {
 							className="hero-content"
 							style={{ ...heroContent, ...heroImage }}
 						>
-							<span>Scholrshipopalis</span>
+							<span>Scholarshipopolis</span>
 							<span style={heroContentSub}>
-								Check eligibility for your scholrship today.
+								Check eligibility for your scholarship today.
 							</span>
 						</div>
 					</Grid>
 					<Grid item xs={12} md={12} lg={6}>
 						<div className="hero-image" style={heroImage}>
-							<img src={favicon} alt="Scholrshipopalis" />
+							<img src={favicon} alt="Scholarshipopolis" />
 						</div>
 					</Grid>
 				</Grid>
