@@ -13,21 +13,23 @@ import { Link } from "react-router-dom";
 
 const theme = createTheme();
 
-export default function Login() {
-	const [loginUser, setLoginUser] = React.useState({
+export default function Register() {
+	const [registerUser, setRegisterUser] = React.useState({
+		fname: "",
+		lname: "",
 		email: "",
 		password: "",
 	});
 	const handleChange = (e) => {
 		const { name, value } = e.target;
-		setLoginUser({
-			...loginUser,
+		setRegisterUser({
+			...registerUser,
 			[name]: value,
 		});
 	};
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		console.log(loginUser);
+		console.log(registerUser);
 	};
 	return (
 		<ThemeProvider theme={theme}>
@@ -46,7 +48,7 @@ export default function Login() {
 						<LockOutlinedIcon />
 					</Avatar>
 					<Typography component="h1" variant="h5">
-						Log In to your account
+						Sign Up Today
 					</Typography>
 					<Box
 						component="form"
@@ -58,12 +60,36 @@ export default function Login() {
 							margin="normal"
 							required
 							fullWidth
+							id="fname"
+							type="text"
+							label="First Name"
+							name="fname"
+							autoComplete="fname"
+							value={registerUser.fname}
+							onChange={handleChange}
+						/>
+						<TextField
+							margin="normal"
+							required
+							fullWidth
+							id="lname"
+							type="text"
+							label="Last Name"
+							name="lname"
+							autoComplete="lname"
+							value={registerUser.lname}
+							onChange={handleChange}
+						/>
+						<TextField
+							margin="normal"
+							required
+							fullWidth
 							id="email"
 							type="email"
 							label="Email Address"
 							name="email"
 							autoComplete="email"
-							value={loginUser.email}
+							value={registerUser.email}
 							onChange={handleChange}
 						/>
 						<TextField
@@ -75,7 +101,7 @@ export default function Login() {
 							label="Password"
 							name="password"
 							autoComplete="password"
-							value={loginUser.password}
+							value={registerUser.password}
 							onChange={handleChange}
 						/>
 						<Button
@@ -84,12 +110,12 @@ export default function Login() {
 							variant="contained"
 							sx={{ mt: 3, mb: 2 }}
 						>
-							Login
+							Sign up
 						</Button>
 						<Grid container>
 							<Grid item>
-								<Link to="/register">
-									{"Don't have an account? Sign Up"}
+								<Link to="/login">
+									{"Already have an account? Login"}
 								</Link>
 							</Grid>
 						</Grid>
